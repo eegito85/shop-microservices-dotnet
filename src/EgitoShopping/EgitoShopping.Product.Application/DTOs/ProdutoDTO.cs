@@ -1,11 +1,11 @@
-﻿namespace EgitoShopping.Product.Domain.Entities
+﻿namespace EgitoShopping.Product.Application.DTOs
 {
-    public class Produto
+    public class ProdutoDTO
     {
         public long Id { get; set; }
         public string Name { get; set; }
-        public decimal Price { get; set;}
-        public string Description { get; set;}
+        public decimal Price { get; set; }
+        public string Description { get; set; }
         public string CategoryName { get; set; }
         public string UrlImage { get; set; }
     }
