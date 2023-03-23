@@ -7,7 +7,7 @@ namespace EgitoShopping.Web.Services
     public class ProductService : IProductService
     {
         private readonly HttpClient _client;
-        public const string BasePath = "api/v1/product";
+        public const string BasePath = "api/product";
 
         public ProductService(HttpClient client)
         {
@@ -42,7 +42,7 @@ namespace EgitoShopping.Web.Services
 
         public async Task<ProductModel> Update(ProductModel model)
         {
-            var response = await _client.PutAsJson($"{BasePath}/create", model);
+            var response = await _client.PutAsJson($"{BasePath}/update", model);
 
             if (response.IsSuccessStatusCode) { return await response.ReadContentAs<ProductModel>(); }
 

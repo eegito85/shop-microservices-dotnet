@@ -16,7 +16,7 @@ namespace EgitoShopping.ProductApi.Controllers
             _service = service;
         }
 
-        [HttpGet("all")]
+        [HttpGet("")]
         public async Task<ActionResult<IEnumerable<ProdutoDTO>>> GetAllProducts() 
         {
             var products = await _service.FindAllAsync();
@@ -35,7 +35,7 @@ namespace EgitoShopping.ProductApi.Controllers
         }
 
         [HttpPost("create")]
-        public async Task<ActionResult<ProdutoDTO>> CreateProduct(ProdutoDTO product)
+        public async Task<ActionResult<ProdutoDTO>> CreateProduct([FromBody] ProdutoDTO product)
         {
             if (product == null) 
             { 
@@ -47,7 +47,7 @@ namespace EgitoShopping.ProductApi.Controllers
         }
 
         [HttpPut("update")]
-        public async Task<ActionResult<ProdutoDTO>> UpdateProduct(ProdutoDTO product)
+        public async Task<ActionResult<ProdutoDTO>> UpdateProduct([FromBody] ProdutoDTO product)
         {
             if (product == null)
             {
