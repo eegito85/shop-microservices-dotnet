@@ -1,5 +1,9 @@
 ﻿using EgitoShopping.CartShop.Application.Mappings;
+using EgitoShopping.CartShop.Application.Services;
+using EgitoShopping.CartShop.Application.Services.Interfaces;
+using EgitoShopping.CartShop.Domain.Interfaces;
 using EgitoShopping.CartShop.Infra.Data.Context;
+using EgitoShopping.CartShop.Infra.Data.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -17,8 +21,8 @@ namespace EgitoShopping.CartShop.Infra.IoC
 
             services.AddAutoMapper(typeof(DomainToDTOMappingProfile));
 
-            //services.AddScoped<IProductRepository, ProductRepository>();
-            //services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<ICartRepository, CartRepository>();
+            services.AddScoped<ICartService, CartService>();
 
             return services;
         }

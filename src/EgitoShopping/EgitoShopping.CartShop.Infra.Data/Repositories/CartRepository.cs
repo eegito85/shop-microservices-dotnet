@@ -2,11 +2,6 @@
 using EgitoShopping.CartShop.Domain.Interfaces;
 using EgitoShopping.CartShop.Infra.Data.Context;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EgitoShopping.CartShop.Infra.Data.Repositories
 {
@@ -26,7 +21,18 @@ namespace EgitoShopping.CartShop.Infra.Data.Repositories
 
         public async Task<bool> ClearCart(string userId)
         {
-            throw new NotImplementedException();
+            var cartHeader = await _context.CartHeaders
+                        .FirstOrDefaultAsync(c => c.UserId == userId);
+            if (cartHeader != null)
+            {
+                _context.CartDetails
+                    .RemoveRange(
+                    _context.CartDetails.Where(c => c.CartHeaderId == cartHeader.Id));
+                _context.CartHeaders.Remove(cartHeader);
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            return false;
         }
 
         public async Task<Cart> FindCartByUserId(string userId)
@@ -51,57 +57,75 @@ namespace EgitoShopping.CartShop.Infra.Data.Repositories
         {
             try
             {
+                CartDetail cartDetail = await _context.CartDetails
+                    .FirstOrDefaultAsync(c => c.Id == cartDetailsId);
 
+                int total = _context.CartDetails
+                    .Where(c => c.CartHeaderId == cartDetail.CartHeaderId).Count();
+
+                _context.CartDetails.Remove(cartDetail);
+
+                if (total == 1)
+                {
+                    var cartHeaderToRemove = await _context.CartHeaders
+                        .FirstOrDefaultAsync(c => c.Id == cartDetail.CartHeaderId);
+                    _context.CartHeaders.Remove(cartHeaderToRemove);
+                }
+                await _context.SaveChangesAsync();
+                return true;
             }
             catch (Exception)
             {
-
-                throw;
+                return false;
             }
-            throw new NotImplementedException();
         }
 
         public async Task<Cart> SaveOrUpdateCart(Cart cart)
         {
+            //Checks if the product is already saved in the database if it does not exist then save
             var product = await _context.Products.FirstOrDefaultAsync(
                 p => p.Id == cart.CartDetails.FirstOrDefault().ProductId);
-            
-            if (product == null) 
+
+            if (product == null)
             {
                 _context.Products.Add(cart.CartDetails.FirstOrDefault().Product);
                 await _context.SaveChangesAsync();
             }
 
+            //Check if CartHeader is null
+
             var cartHeader = await _context.CartHeaders.AsNoTracking().FirstOrDefaultAsync(
                 c => c.UserId == cart.CartHeader.UserId);
 
-            if (cartHeader == null) 
+            if (cartHeader == null)
             {
+                //Create CartHeader and CartDetails
                 _context.CartHeaders.Add(cart.CartHeader);
                 await _context.SaveChangesAsync();
-
                 cart.CartDetails.FirstOrDefault().CartHeaderId = cart.CartHeader.Id;
                 cart.CartDetails.FirstOrDefault().Product = null;
-
                 _context.CartDetails.Add(cart.CartDetails.FirstOrDefault());
                 await _context.SaveChangesAsync();
             }
             else
             {
+                //If CartHeader is not null
+                //Check if CartDetails has same product
                 var cartDetail = await _context.CartDetails.AsNoTracking().FirstOrDefaultAsync(
                     p => p.ProductId == cart.CartDetails.FirstOrDefault().ProductId &&
                     p.CartHeaderId == cartHeader.Id);
 
                 if (cartDetail == null)
                 {
+                    //Create CartDetails
                     cart.CartDetails.FirstOrDefault().CartHeaderId = cart.CartHeader.Id;
                     cart.CartDetails.FirstOrDefault().Product = null;
-
                     _context.CartDetails.Add(cart.CartDetails.FirstOrDefault());
                     await _context.SaveChangesAsync();
                 }
                 else
                 {
+                    //Update product count and CartDetails
                     cart.CartDetails.FirstOrDefault().Product = null;
                     cart.CartDetails.FirstOrDefault().Count += cartDetail.Count;
                     cart.CartDetails.FirstOrDefault().Id = cartDetail.Id;
@@ -109,10 +133,7 @@ namespace EgitoShopping.CartShop.Infra.Data.Repositories
                     _context.CartDetails.Update(cart.CartDetails.FirstOrDefault());
                     await _context.SaveChangesAsync();
                 }
-
             }
-
-
             return cart;
         }
     }
