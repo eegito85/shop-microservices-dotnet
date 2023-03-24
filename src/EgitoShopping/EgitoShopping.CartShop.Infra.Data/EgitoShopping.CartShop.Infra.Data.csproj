@@ -19,4 +19,12 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="EntityConfiguration\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EgitoShopping.CartShop.Domain\EgitoShopping.CartShop.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

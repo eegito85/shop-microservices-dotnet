@@ -8,7 +8,13 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EgitoShopping.CartShop.Application\EgitoShopping.CartShop.Application.csproj" />
+    <ProjectReference Include="..\EgitoShopping.CartShop.Infra.Data\EgitoShopping.CartShop.Infra.Data.csproj" />
   </ItemGroup>
 
 </Project>
