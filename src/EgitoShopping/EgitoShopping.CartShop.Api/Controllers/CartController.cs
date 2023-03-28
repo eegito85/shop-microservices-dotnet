@@ -20,14 +20,14 @@ namespace EgitoShopping.CartShop.Api.Controllers
 
 
         [HttpGet("find-cart/{id}")]
-        public async Task<ActionResult<CartDTO>> FindById(string userId)
+        public async Task<ActionResult<CartDTO>> FindById(string id)
         {
-            var cart = await _service.FindCartByUserId(userId);
+            var cart = await _service.FindCartByUserId(id);
             if (cart == null) return NotFound();
             return Ok(cart);
         }
 
-        [HttpPost("add-cart/{id}")]
+        [HttpPost("add-cart")]
         public async Task<ActionResult<CartDTO>> AddCart(CartDTO vo)
         {
             var cart = await _service.SaveOrUpdateCart(vo);
@@ -35,7 +35,7 @@ namespace EgitoShopping.CartShop.Api.Controllers
             return Ok(cart);
         }
 
-        [HttpPut("update-cart/{id}")]
+        [HttpPut("update-cart")]
         public async Task<ActionResult<CartDTO>> UpdateCart(CartDTO vo)
         {
             var cart = await _service.SaveOrUpdateCart(vo);
