@@ -1,0 +1,104 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33502.453
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontEnd", "FrontEnd", "{AFBB0C5C-2AC9-474C-9D08-A8682637E85E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{B691FBD0-992B-4ADF-BCBA-9A42F80C8F42}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EgitoShopping.Web", "EgitoShopping.Web\EgitoShopping.Web.csproj", "{CF4DBDA7-2277-4CDB-B2E9-E86A977E5101}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EgitoShopping.ProductApi", "EgitoShopping.ProductApi\EgitoShopping.ProductApi.csproj", "{90618D0B-E448-4B6F-85A5-A8634F49E6E8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EgitoShopping.Product.Infra.IoC", "EgitoShopping.Product.Infra.IoC\EgitoShopping.Product.Infra.IoC.csproj", "{ADB81677-5024-40E5-A114-834C2562E204}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EgitoShopping.Product.Infra.Data", "EgitoShopping.Product.Infra.Data\EgitoShopping.Product.Infra.Data.csproj", "{9C970590-ECEE-42A2-B2C4-FE9054003C6A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EgitoShopping.Product.Domain", "EgitoShopping.Product.Domain\EgitoShopping.Product.Domain.csproj", "{9109248D-11EC-4BB7-B3A7-3B585C96E39D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EgitoShopping.Product.Application", "EgitoShopping.Product.Application\EgitoShopping.Product.Application.csproj", "{D28704E2-5761-4D3E-9516-410AE504FEBB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CartServices", "CartServices", "{0720AB1D-EF84-4368-B22C-3DA575FDB4F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EgitoShopping.CartShop.Api", "EgitoShopping.CartShop.Api\EgitoShopping.CartShop.Api.csproj", "{D7A6C3B2-BD71-4C30-BC66-735BCEFF8663}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EgitoShopping.CartShop.Application", "EgitoShopping.CartShop.Application\EgitoShopping.CartShop.Application.csproj", "{A2CFF21A-7F17-4B30-BF38-5290F7490713}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EgitoShopping.CartShop.Domain", "EgitoShopping.CartShop.Domain\EgitoShopping.CartShop.Domain.csproj", "{C72D67BB-96CD-42A2-8497-4015EFE295D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EgitoShopping.CartShop.Infra.Data", "EgitoShopping.CartShop.Infra.Data\EgitoShopping.CartShop.Infra.Data.csproj", "{44EA3F43-4AD2-4F0C-A011-C303D83A698C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EgitoShopping.CartShop.Infra.IoC", "EgitoShopping.CartShop.Infra.IoC\EgitoShopping.CartShop.Infra.IoC.csproj", "{5032298B-81C8-4311-A6C6-514E539181CC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF4DBDA7-2277-4CDB-B2E9-E86A977E5101}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF4DBDA7-2277-4CDB-B2E9-E86A977E5101}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF4DBDA7-2277-4CDB-B2E9-E86A977E5101}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF4DBDA7-2277-4CDB-B2E9-E86A977E5101}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90618D0B-E448-4B6F-85A5-A8634F49E6E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90618D0B-E448-4B6F-85A5-A8634F49E6E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90618D0B-E448-4B6F-85A5-A8634F49E6E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90618D0B-E448-4B6F-85A5-A8634F49E6E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADB81677-5024-40E5-A114-834C2562E204}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADB81677-5024-40E5-A114-834C2562E204}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADB81677-5024-40E5-A114-834C2562E204}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADB81677-5024-40E5-A114-834C2562E204}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C970590-ECEE-42A2-B2C4-FE9054003C6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C970590-ECEE-42A2-B2C4-FE9054003C6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C970590-ECEE-42A2-B2C4-FE9054003C6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C970590-ECEE-42A2-B2C4-FE9054003C6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9109248D-11EC-4BB7-B3A7-3B585C96E39D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9109248D-11EC-4BB7-B3A7-3B585C96E39D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9109248D-11EC-4BB7-B3A7-3B585C96E39D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9109248D-11EC-4BB7-B3A7-3B585C96E39D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D28704E2-5761-4D3E-9516-410AE504FEBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D28704E2-5761-4D3E-9516-410AE504FEBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D28704E2-5761-4D3E-9516-410AE504FEBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D28704E2-5761-4D3E-9516-410AE504FEBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7A6C3B2-BD71-4C30-BC66-735BCEFF8663}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7A6C3B2-BD71-4C30-BC66-735BCEFF8663}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7A6C3B2-BD71-4C30-BC66-735BCEFF8663}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7A6C3B2-BD71-4C30-BC66-735BCEFF8663}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2CFF21A-7F17-4B30-BF38-5290F7490713}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2CFF21A-7F17-4B30-BF38-5290F7490713}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2CFF21A-7F17-4B30-BF38-5290F7490713}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2CFF21A-7F17-4B30-BF38-5290F7490713}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C72D67BB-96CD-42A2-8497-4015EFE295D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C72D67BB-96CD-42A2-8497-4015EFE295D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C72D67BB-96CD-42A2-8497-4015EFE295D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C72D67BB-96CD-42A2-8497-4015EFE295D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44EA3F43-4AD2-4F0C-A011-C303D83A698C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44EA3F43-4AD2-4F0C-A011-C303D83A698C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44EA3F43-4AD2-4F0C-A011-C303D83A698C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44EA3F43-4AD2-4F0C-A011-C303D83A698C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5032298B-81C8-4311-A6C6-514E539181CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5032298B-81C8-4311-A6C6-514E539181CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5032298B-81C8-4311-A6C6-514E539181CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5032298B-81C8-4311-A6C6-514E539181CC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CF4DBDA7-2277-4CDB-B2E9-E86A977E5101} = {AFBB0C5C-2AC9-474C-9D08-A8682637E85E}
+		{90618D0B-E448-4B6F-85A5-A8634F49E6E8} = {B691FBD0-992B-4ADF-BCBA-9A42F80C8F42}
+		{ADB81677-5024-40E5-A114-834C2562E204} = {B691FBD0-992B-4ADF-BCBA-9A42F80C8F42}
+		{9C970590-ECEE-42A2-B2C4-FE9054003C6A} = {B691FBD0-992B-4ADF-BCBA-9A42F80C8F42}
+		{9109248D-11EC-4BB7-B3A7-3B585C96E39D} = {B691FBD0-992B-4ADF-BCBA-9A42F80C8F42}
+		{D28704E2-5761-4D3E-9516-410AE504FEBB} = {B691FBD0-992B-4ADF-BCBA-9A42F80C8F42}
+		{D7A6C3B2-BD71-4C30-BC66-735BCEFF8663} = {0720AB1D-EF84-4368-B22C-3DA575FDB4F5}
+		{A2CFF21A-7F17-4B30-BF38-5290F7490713} = {0720AB1D-EF84-4368-B22C-3DA575FDB4F5}
+		{C72D67BB-96CD-42A2-8497-4015EFE295D9} = {0720AB1D-EF84-4368-B22C-3DA575FDB4F5}
+		{44EA3F43-4AD2-4F0C-A011-C303D83A698C} = {0720AB1D-EF84-4368-B22C-3DA575FDB4F5}
+		{5032298B-81C8-4311-A6C6-514E539181CC} = {0720AB1D-EF84-4368-B22C-3DA575FDB4F5}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {685BE58E-6270-48FC-8DA3-D9AE875780E7}
+	EndGlobalSection
+EndGlobal
