@@ -1,7 +1,5 @@
 ﻿using EgitoShopping.Web.Models;
 using EgitoShopping.Web.Services.IServices;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EgitoShopping.Web.Controllers
@@ -18,7 +16,7 @@ namespace EgitoShopping.Web.Controllers
             _cartService = cartService;
         }
 
-        [Authorize]
+        
         public async Task<IActionResult> CartIndex()
         {
             return View(await FindUserCart());
