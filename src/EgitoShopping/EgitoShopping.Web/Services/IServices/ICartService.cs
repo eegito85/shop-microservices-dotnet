@@ -9,10 +9,10 @@ namespace EgitoShopping.Web.Services.IServices
         Task<CartViewModel> UpdateCart(CartViewModel cart);
         Task<bool> RemoveFromCart(long cartId);
 
-        Task<bool> ApplyCoupon(CartViewModel cart, string couponCode);
+        Task<bool> ApplyCoupon(CartViewModel cart);
         Task<bool> RemoveCoupon(string userId);
         Task<bool> ClearCart(string userId);
 
-        Task<CartViewModel> Checkout(CartHeaderViewModel cartHeader);
+        Task<CartHeaderViewModel> Checkout(CartHeaderViewModel cartHeader);
     }
 }

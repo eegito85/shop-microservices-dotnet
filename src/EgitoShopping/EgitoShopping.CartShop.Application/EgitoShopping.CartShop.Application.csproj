@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EgitoShopping.CartShop.Domain\EgitoShopping.CartShop.Domain.csproj" />
+    <ProjectReference Include="..\EgitoShopping.MessageBus\EgitoShopping.MessageBus.csproj" />
   </ItemGroup>
 
 </Project>

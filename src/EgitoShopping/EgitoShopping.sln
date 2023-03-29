@@ -21,15 +21,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EgitoShopping.Product.Appli
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CartServices", "CartServices", "{0720AB1D-EF84-4368-B22C-3DA575FDB4F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EgitoShopping.CartShop.Api", "EgitoShopping.CartShop.Api\EgitoShopping.CartShop.Api.csproj", "{D7A6C3B2-BD71-4C30-BC66-735BCEFF8663}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EgitoShopping.CartShop.Api", "EgitoShopping.CartShop.Api\EgitoShopping.CartShop.Api.csproj", "{D7A6C3B2-BD71-4C30-BC66-735BCEFF8663}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EgitoShopping.CartShop.Application", "EgitoShopping.CartShop.Application\EgitoShopping.CartShop.Application.csproj", "{A2CFF21A-7F17-4B30-BF38-5290F7490713}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EgitoShopping.CartShop.Application", "EgitoShopping.CartShop.Application\EgitoShopping.CartShop.Application.csproj", "{A2CFF21A-7F17-4B30-BF38-5290F7490713}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EgitoShopping.CartShop.Domain", "EgitoShopping.CartShop.Domain\EgitoShopping.CartShop.Domain.csproj", "{C72D67BB-96CD-42A2-8497-4015EFE295D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EgitoShopping.CartShop.Domain", "EgitoShopping.CartShop.Domain\EgitoShopping.CartShop.Domain.csproj", "{C72D67BB-96CD-42A2-8497-4015EFE295D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EgitoShopping.CartShop.Infra.Data", "EgitoShopping.CartShop.Infra.Data\EgitoShopping.CartShop.Infra.Data.csproj", "{44EA3F43-4AD2-4F0C-A011-C303D83A698C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EgitoShopping.CartShop.Infra.Data", "EgitoShopping.CartShop.Infra.Data\EgitoShopping.CartShop.Infra.Data.csproj", "{44EA3F43-4AD2-4F0C-A011-C303D83A698C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EgitoShopping.CartShop.Infra.IoC", "EgitoShopping.CartShop.Infra.IoC\EgitoShopping.CartShop.Infra.IoC.csproj", "{5032298B-81C8-4311-A6C6-514E539181CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EgitoShopping.CartShop.Infra.IoC", "EgitoShopping.CartShop.Infra.IoC\EgitoShopping.CartShop.Infra.IoC.csproj", "{5032298B-81C8-4311-A6C6-514E539181CC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Integration", "Integration", "{76F4D354-0A07-4B58-AFAE-F9989D751A58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EgitoShopping.MessageBus", "EgitoShopping.MessageBus\EgitoShopping.MessageBus.csproj", "{91BFDF74-3597-4EC8-8314-A84C124DF1A5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +85,10 @@ Global
 		{5032298B-81C8-4311-A6C6-514E539181CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5032298B-81C8-4311-A6C6-514E539181CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5032298B-81C8-4311-A6C6-514E539181CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91BFDF74-3597-4EC8-8314-A84C124DF1A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91BFDF74-3597-4EC8-8314-A84C124DF1A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91BFDF74-3597-4EC8-8314-A84C124DF1A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91BFDF74-3597-4EC8-8314-A84C124DF1A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -97,6 +105,7 @@ Global
 		{C72D67BB-96CD-42A2-8497-4015EFE295D9} = {0720AB1D-EF84-4368-B22C-3DA575FDB4F5}
 		{44EA3F43-4AD2-4F0C-A011-C303D83A698C} = {0720AB1D-EF84-4368-B22C-3DA575FDB4F5}
 		{5032298B-81C8-4311-A6C6-514E539181CC} = {0720AB1D-EF84-4368-B22C-3DA575FDB4F5}
+		{91BFDF74-3597-4EC8-8314-A84C124DF1A5} = {76F4D354-0A07-4B58-AFAE-F9989D751A58}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {685BE58E-6270-48FC-8DA3-D9AE875780E7}

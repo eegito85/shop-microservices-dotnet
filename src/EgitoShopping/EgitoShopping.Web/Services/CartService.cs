@@ -2,6 +2,7 @@
 using EgitoShopping.Web.Services.IServices;
 using EgitoShopping.Web.Utils;
 using System.Net.Http.Headers;
+using System.Reflection;
 
 namespace EgitoShopping.Web.Services
 {
@@ -46,14 +47,20 @@ namespace EgitoShopping.Web.Services
             else throw new Exception("Something went wrong when calling API");
         }
 
-        public async Task<bool> ApplyCoupon(CartViewModel cart, string couponCode)
+        public async Task<bool> ApplyCoupon(CartViewModel cart)
         {
-            throw new NotImplementedException();
+            var response = await _client.PostAsJson($"{BasePath}/apply-coupon", cart);
+            if (response.IsSuccessStatusCode)
+                return await response.ReadContentAs<bool>();
+            else throw new Exception("Something went wrong when calling API");
         }
 
-        public async Task<CartViewModel> Checkout(CartHeaderViewModel cartHeader)
+        public async Task<CartHeaderViewModel> Checkout(CartHeaderViewModel cartHeader)
         {
-            throw new NotImplementedException();
+            var response = await _client.PostAsJson($"{BasePath}/checkout", cartHeader);
+            if (response.IsSuccessStatusCode)
+                return await response.ReadContentAs<CartHeaderViewModel>();
+            else throw new Exception("Something went wrong when calling API");
         }
 
         public async Task<bool> ClearCart(string userId)
@@ -63,7 +70,10 @@ namespace EgitoShopping.Web.Services
 
         public async Task<bool> RemoveCoupon(string userId)
         {
-            throw new NotImplementedException();
+            var response = await _client.DeleteAsync($"{BasePath}/remove-coupon/{userId}");
+            if (response.IsSuccessStatusCode)
+                return await response.ReadContentAs<bool>();
+            else throw new Exception("Something went wrong when calling API");
         }
     }
 }
